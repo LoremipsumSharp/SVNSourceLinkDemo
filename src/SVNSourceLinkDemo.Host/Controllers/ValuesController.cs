@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using SVNSourceLinkDemo.Common;
 
 namespace SVNSourceLinkDemo.Host.Controllers
 {
@@ -14,6 +15,7 @@ namespace SVNSourceLinkDemo.Host.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            var message = Utils.Greet("loremipsum");
             return new string[] { "value1", "value2" };
         }
 
